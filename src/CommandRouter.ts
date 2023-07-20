@@ -21,10 +21,13 @@ export class CommandRouter {
       // Draft
       case 'draft':
         DraftCommandHandler.draft(message)
+        break
       case 'demote':
         DemoteCommandHandler.demote(message)
+        break
       case 'roll':
         RollCommandHandler.roll(message)
+        break
     }
     args.forEach(arg => {
       console.log(arg)

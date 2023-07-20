@@ -34,6 +34,6 @@ export class RollCommandHandler extends CommandHandler {
     }
 
     const outputMessage = rolledNumbers.join(", ");
-    message.channel.send(`You rolled: ${outputMessage}.`);
+    message.channel.send(outputMessage);
   }
 }

@@ -2,6 +2,8 @@ import { Message } from "discord.js";
 import { CommandParserUtility } from "./CommandParserUtility";
 import { AudioCommandHandler } from "./AudioCommandHandler";
 import { DraftCommandHandler } from "./DraftCommandHandler";
+import { DemoteCommandHandler } from "./DemoteCommandHandler";
+import { RollCommandHandler } from "./RollCommandHandler";
 
 export class CommandRouter {
   public static route(message: Message) {
@@ -19,6 +21,10 @@ export class CommandRouter {
       // Draft
       case 'draft':
         DraftCommandHandler.draft(message)
+      case 'demote':
+        DemoteCommandHandler.demote(message)
+      case 'roll':
+        RollCommandHandler.roll(message)
     }
     args.forEach(arg => {
       console.log(arg)

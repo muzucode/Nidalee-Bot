@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { Client, Intents, Message, TextChannel } from 'discord.js';
 import { CommandValidator } from './CommandValidator';
 import { CommandRouter } from './CommandRouter';
@@ -24,4 +25,4 @@ client.on('messageCreate', (message: Message) => {
   }
 });
 
-client.login('MTEzMTA1NjA5NDIwNzI5NTU1OQ.GbwEc_.hPB5AYWuRyauypPkZwMuglSZK92Sw6kDoQGifU');
+client.login(process.env.APPLICATION_TOKEN);

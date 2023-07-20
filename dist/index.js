@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+require("dotenv/config");
 const discord_js_1 = require("discord.js");
 const CommandValidator_1 = require("./CommandValidator");
-const CommandHandler_1 = require("./CommandHandler");
+const CommandRouter_1 = require("./CommandRouter");
 const configuration = {
     intents: [
         discord_js_1.Intents.FLAGS.GUILDS,
@@ -18,7 +19,7 @@ client.on('ready', () => {
 });
 client.on('messageCreate', (message) => {
     if (CommandValidator_1.CommandValidator.validate(message)) {
-        CommandHandler_1.CommandHandler.handle(message);
+        CommandRouter_1.CommandRouter.route(message);
     }
 });
-client.login('MTEzMTA1NjA5NDIwNzI5NTU1OQ.GbwEc_.hPB5AYWuRyauypPkZwMuglSZK92Sw6kDoQGifU');
+client.login(process.env.APPLICATION_TOKEN);

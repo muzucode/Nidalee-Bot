@@ -21,10 +21,13 @@ class CommandRouter {
             // Draft
             case 'draft':
                 DraftCommandHandler_1.DraftCommandHandler.draft(message);
+                break;
             case 'demote':
                 DemoteCommandHandler_1.DemoteCommandHandler.demote(message);
+                break;
             case 'roll':
                 RollCommandHandler_1.RollCommandHandler.roll(message);
+                break;
         }
         args.forEach(arg => {
             console.log(arg);

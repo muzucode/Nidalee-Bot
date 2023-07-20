@@ -30,7 +30,7 @@ class RollCommandHandler extends CommandHandler_1.CommandHandler {
             rolledNumbers.push(randomNumber);
         }
         const outputMessage = rolledNumbers.join(", ");
-        message.channel.send(`You rolled: ${outputMessage}.`);
+        message.channel.send(outputMessage);
     }
 }
 exports.RollCommandHandler = RollCommandHandler;

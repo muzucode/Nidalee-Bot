@@ -7,7 +7,8 @@ const CommandRouter_1 = require("./CommandRouter");
 const configuration = {
     intents: [
         discord_js_1.Intents.FLAGS.GUILDS,
-        discord_js_1.Intents.FLAGS.GUILD_MESSAGES, // Required to receive message events
+        discord_js_1.Intents.FLAGS.GUILD_MESSAGES,
+        discord_js_1.Intents.FLAGS.GUILD_MEMBERS,
         // Add more intents if needed, for example:
         // Intents.FLAGS.GUILD_VOICE_STATES, // Required for voice channel related events
     ],
